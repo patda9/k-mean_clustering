@@ -38,9 +38,14 @@ np.set_printoptions(suppress = True)
 
 E = np.inf
 k = 4
-data_set = np.array([[185, 72], [170, 56], [168, 60], [179, 68], [182, 72], [188, 77]], dtype = np.float32)
-data_set = np.random.randint(200, size = (3200, 2))
+
+## Data mining course dataset ##
 # data_set = data_map(preprocess('./dresses_attribute_sales.csv'))
+## Data mining course dataset ##
+
+test_data_set = np.array([[185, 72], [170, 56], [168, 60], [179, 68], [182, 72], [188, 77]], dtype = np.float32)
+data_set = np.random.randint(200, size = (3200, 2))
+
 centroids = np.zeros((k, len(data_set[0]))) # random pick centroids k = 2
 
 initialize_centroids(centroids, data_set)
